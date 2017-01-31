@@ -1,15 +1,16 @@
 from flask import Flask
+from flask import render_template
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello():
-    return "Jeu de pistes musicales !"
+    return render_template('hello.html')
 
 
 @app.route("/game-won")
 def game_won():
-    return "Game won !"
+    return render_template('game_won.html')
 
 
 if __name__ == "__main__":
