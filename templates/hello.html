@@ -2,53 +2,138 @@
 <html>
 	<head>
 		<title>Jeu de Pistes Musicales</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
 		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery/dist/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 	</head>
 
 	<body>
+		<div id="container">
 
-		<h1> Jeu de pistes musicales </h1>
+			<!-- 0 AL JARREAU -->
+			<div class="card-container">
+				<div id="0-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="0-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/0-jarreau.png">
+						<img class="shape-img" src="../assets/0.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Al Jarreau</div>
+						<div class="track-name">You don't see me (live 1976)</div>
+					</div>
+				</div>
+			</div>
 
-		<p>
-			<span> Song 0 : &nbsp;</span>
-			<span id="0-locked"> Mystery </span>
-			<span id="0-unlocked"> Triangle </span>
-		</p>
-		<p>
-			<span> Song 1 : &nbsp;</span>
-			<span id="1-locked"> Mystery </span>
-			<span id="1-unlocked"> Square </span>
-		</p>
-		<p>
-			<span> Song 2 : &nbsp;</span>
-			<span id="2-locked"> Mystery </span>
-			<span id="2-unlocked"> Triangle </span>
-		</p>
-		<p>
-			<span> Song 3 : &nbsp;</span>
-			<span id="3-locked"> Mystery </span>
-			<span id="3-unlocked"> Square </span>
-		</p>
-		<p>
-			<span> Song 4 : &nbsp;</span>
-			<span id="4-locked"> Mystery </span>
-			<span id="4-unlocked"> Triangle </span>
-		</p>
-		<p>
-			<span> Song 5 : &nbsp;</span>
-			<span id="5-locked"> Mystery </span>
-			<span id="5-unlocked"> Square </span>
-		</p>
-		<p>
-			<span> Song 6 : &nbsp;</span>
-			<span id="6-locked"> Mystery </span>
-			<span id="6-unlocked"> Triangle </span>
-		</p>
+			<!-- 1 JACO PASTORIUS -->
+			<div class="card-container">
+				<div id="1-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="1-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/1-pastorius.png">
+						<img class="shape-img" src="../assets/1.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Jaco Pastorius</div>
+						<div class="track-name">Portrait of Tracy (1976)</div>
+					</div>
+				</div>
+			</div>
 
-		<a id="game-won" href="/game-won"> Game Won </a>
+			<!-- 2 APHEX TWIN -->
+			<div class="card-container">
+				<div id="2-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="2-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/2-aphex.png">
+						<img class="shape-img" src="../assets/2.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Aphex Twin</div>
+						<div class="track-name">Blue Calx (1994)</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3 ANTONIO CARLOS JOBIM -->
+			<div class="card-container">
+				<div id="3-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="3-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/3-jobim.png">
+						<img class="shape-img" src="../assets/3.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Antonio Carlos Jobim</div>
+						<div class="track-name">Wave (1976)</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4 HERBIE HANCOCK -->
+			<div class="card-container">
+				<div id="4-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="4-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/4-hancock.png">
+						<img class="shape-img" src="../assets/4.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Herbie Hancock</div>
+						<div class="track-name">Man Child (1975)</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5 ANOUAR BRAHEM -->
+			<div class="card-container">
+				<div id="5-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="5-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/5-brahem.png">
+						<img class="shape-img" src="../assets/5.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Anouar Brahem</div>
+						<div class="track-name">Conte de l’Incroyable Amour</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 6 TAKUYA KURODA -->
+			<div class="card-container">
+				<div id="6-locked" class="card-mystery">
+				 <div class="mystery-symbol">?</div> 
+				</div>
+				<div id="6-unlocked" class="card-unlocked">
+					<div class="img-container">
+						<img class="artist-img" src="../assets/6-kuroda.png">
+						<img class="shape-img" src="../assets/6.png">
+					</div>
+					<div class="text-container">
+						<div class="artist-name">Takuya Kuroda</div>
+						<div class="track-name">Rising Son (2014)</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- container end -->
+		</div>
+<!-- 		<a id="game-won" href="/game-won"> Game Won </a> -->
 
 	</body>
 </html>
