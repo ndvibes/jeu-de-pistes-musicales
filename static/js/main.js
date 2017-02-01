@@ -12,7 +12,7 @@ $(function () {
 		refreshTime);
 
 	// Reset button in /game-won route
-	$("#reset").click(function() {
+	$("#game-won").click(function() {
 		resetState();
 	});
 

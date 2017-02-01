@@ -27,7 +27,7 @@ html * {
 }
 
 #container.with-background {
-  background-image: url('../../assets/deux-mille-dix-sept.png');
+  background-image: url('/static/assets/deux-mille-dix-sept.png');
   background-size:contain;
   background-repeat: no-repeat;
   background-position: center;
