@@ -89,6 +89,7 @@ $(function () {
 			dataType: "json",
 			success: function (data) {
 				console.log(data);
+				gameWon = false;
 			},
 			failure: function(errMsg) {
 		        alert(errMsg);
