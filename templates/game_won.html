@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Jeu de Pistes Musicales</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
-		<script type="text/javascript" src="{{ url_for('static', filename='css/style.css') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery/dist/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 	</head>
 
 	<body>
 
-		<h1> {{ message }} </h1>
+		<h1> You won ! </h1>
+
+		<a id="reset" href="/"> Reset </a>
 
 	</body>
 </html>

@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Jeu de Pistes Musicales</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
-		<script type="text/javascript" src="{{ url_for('static', filename='css/style.css') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery/dist/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 	</head>
 
 	<body>
 
-		<h1> {{ message }} </h1>
+		<h1> Jeu de pistes musicales </h1>
+
+		<p>
+			<span> Song 0 : &nbsp;</span>
+			<span id="0-locked"> Mystery </span>
+			<span id="0-unlocked"> Triangle </span>
+		</p>
+		<p>
+			<span> Song 1 : &nbsp;</span>
+			<span id="1-locked"> Mystery </span>
+			<span id="1-unlocked"> Square </span>
+		</p>
+		<p>
+			<span> Song 2 : &nbsp;</span>
+			<span id="2-locked"> Mystery </span>
+			<span id="2-unlocked"> Triangle </span>
+		</p>
+		<p>
+			<span> Song 3 : &nbsp;</span>
+			<span id="3-locked"> Mystery </span>
+			<span id="3-unlocked"> Square </span>
+		</p>
+		<p>
+			<span> Song 4 : &nbsp;</span>
+			<span id="4-locked"> Mystery </span>
+			<span id="4-unlocked"> Triangle </span>
+		</p>
+		<p>
+			<span> Song 5 : &nbsp;</span>
+			<span id="5-locked"> Mystery </span>
+			<span id="5-unlocked"> Square </span>
+		</p>
+		<p>
+			<span> Song 6 : &nbsp;</span>
+			<span id="6-locked"> Mystery </span>
+			<span id="6-unlocked"> Triangle </span>
+		</p>
+
+		<a id="game-won" href="/game-won"> Game Won </a>
 
 	</body>
 </html>

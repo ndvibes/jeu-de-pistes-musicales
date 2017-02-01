@@ -1,25 +1,46 @@
 from flask import Flask
 from flask import render_template
+from flask import jsonify
+from flask import request
 import json
 import os
 
+APP_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello():
-    message = "Hello !"
-    return render_template(
-        'hello.html',
-        message=message)
+    return render_template('hello.html')
 
 
 @app.route("/game-won")
 def game_won():
-    message = "You won !"
-    return render_template('game_won.html', message=message)
+    return render_template('game_won.html')
+
+
+@app.route("/state", methods=['GET', 'POST'])
+def process_state():
+    state_filepath = os.path.join(
+        APP_DIR,
+        "state.json")
+    if request.method == 'GET':
+        state = []
+        with open(state_filepath) as f:
+            state = json.load(f)
+        return jsonify(state)
+    else:
+        new_state = request.get_json()['state']
+        with open(state_filepath, 'r+') as f:
+            f.write(json.dumps(new_state))
+        return jsonify(new_state)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(
+        # host="0.0.0.0",
+        # port=int("80")
+    )
