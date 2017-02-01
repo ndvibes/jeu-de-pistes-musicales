@@ -2,16 +2,59 @@
 <html>
 	<head>
 		<title>Jeu de Pistes Musicales</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
+<!-- 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery/dist/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 	</head>
 
 	<body>
+		<div id="container" class="with-background">
 
-		<h1> You won ! </h1>
+			<!-- 0 AL JARREAU -->
+			<div class="card-container">
+				<div id="0-locked" class="card-mystery">
+				</div>
+			</div>
 
+			<!-- 1 JACO PASTORIUS -->
+			<div class="card-container">
+				<div id="1-locked" class="card-mystery">
+				</div>
+			</div>
+
+			<!-- 2 APHEX TWIN -->
+			<div class="card-container">
+				<div id="2-locked" class="card-mystery">
+				</div>
+			</div>
+
+			<!-- 3 ANTONIO CARLOS JOBIM -->
+			<div class="card-container">
+				<div id="3-locked" class="card-mystery">
+				</div>
+			</div>
+
+			<!-- 4 HERBIE HANCOCK -->
+			<div class="card-container">
+				<div id="4-locked" class="card-mystery">
+				</div>
+			</div>
+
+			<!-- 5 ANOUAR BRAHEM -->
+			<div class="card-container">
+				<div id="5-locked" class="card-mystery">
+				</div>
+			</div>
+
+			<!-- 6 TAKUYA KURODA -->
+			<div class="card-container">
+				<div id="6-locked" class="card-mystery">
+				</div>
+			</div>
+
+		<!-- container end -->
+		</div>
 		<a id="reset" href="/"> Reset </a>
 
 	</body>

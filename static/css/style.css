@@ -10,7 +10,7 @@ html * {
   box-sizing: border-box;
 }
 
-#game-won {
+#game-won, #reset {
   position: absolute;
   bottom:1rem;
   right:1rem;
@@ -19,11 +19,20 @@ html * {
 
 #container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
+}
+
+#container.with-background {
+  background-image: url('../../assets/deux-mille-dix-sept.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content:center;
+  align-content:center;
 }
 
 .card-container {
@@ -32,6 +41,12 @@ html * {
   position: relative;
   box-shadow:0 0 7px 1px rgba(255,255,255,0.2);
   background: white;
+}
+
+#container.with-background .card-container{
+  width:24%;
+  height:49%;
+  box-shadow: 0 0 0 0;
 }
 
 .card-mystery {
@@ -54,6 +69,11 @@ html * {
   justify-content: center;
   flex-direction: column;
 }
+
+#container.with-background .card-mystery{
+  background: black;
+}
+
 .card-mystery .mystery-symbol {
   font-size: 6rem;
   color:white;
