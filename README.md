@@ -46,3 +46,14 @@ Install all the dependencies with one command. (Here pip == pip3 in the virtual 
 (venv) $ pip install -r requirements.txt
 ```
 
+## Fun part
+
+Go ahead and run the flask server and go to http://localhost:5000/
+
+```shell
+(venv) $ python hello.py
+```
+
+There's enough boilerplate in the templates and static folder for you to guess how to include other static files.
+
+Have fun !
