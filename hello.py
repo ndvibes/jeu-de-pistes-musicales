@@ -33,8 +33,10 @@ def process_state():
             state = json.load(f)
         return jsonify(state)
     else:
-        new_state = request.get_json()['state']
-        with open(state_filepath, 'r+') as f:
+        new_state = request.get_json(force=True)['state']
+        print(new_state)
+        print(json.dumps(new_state))
+        with open(state_filepath, 'w') as f:
             f.write(json.dumps(new_state))
         return jsonify(new_state)
 
